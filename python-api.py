@@ -254,4 +254,4 @@ def send_otp():
         return jsonify({'error': 'Failed to send OTP'}), 400  # Return an error response
     
 if __name__ == '__main__':
-    serve(app, host="127.0.0.1", port=8081)
+    serve(app, host="127.0.0.1", port=8080)

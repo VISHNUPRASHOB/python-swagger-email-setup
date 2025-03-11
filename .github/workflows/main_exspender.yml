@@ -78,4 +78,8 @@ jobs:
         with:
           app-name: 'exspender'
           slot-name: 'Production'
+      - name: Run Python file
+        run: |
+          source venv/bin/activate
+          python Initiating_Google_Authentication_for_Gmail.py
           

@@ -81,5 +81,5 @@ jobs:
       - name: Run Python file
         run: |
           source venv/bin/activate
-          python Initiating_Google_Authentication_for_Gmail.py
+          python python-api.py
           

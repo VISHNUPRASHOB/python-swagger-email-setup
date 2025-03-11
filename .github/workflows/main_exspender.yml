@@ -25,7 +25,7 @@ jobs:
 
       # Zip artifact for deployment
       - name: Zip artifact for deployment
-        run: zip -r release.zip . -x "venv/*" ".github/*" "__pycache__/*" "*.pyc"
+        run: zip release.zip python-api.py requirements.txt
 
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v4

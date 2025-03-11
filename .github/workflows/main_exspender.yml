@@ -23,8 +23,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      # Optional: Add step to run tests here (PyTest, unit tests)
-
+      # Zip artifact for deployment
       - name: Zip artifact for deployment
         run: zip -r release.zip . -x "venv/*" ".github/*" "__pycache__/*" "*.pyc"
 

@@ -83,4 +83,4 @@ jobs:
           python -m venv venv
           source venv/bin/activate
           pip install -r requirements.txt
-          python src/python-api.py
+          python blob/main/python-api.py

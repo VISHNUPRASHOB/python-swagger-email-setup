@@ -253,7 +253,10 @@ def send_otp():
         print(f'An error occurred: {error}')
         return jsonify({'error': 'Failed to send OTP'}), 400  # Return an error response
     
-if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 8080))  # Use dynamic port if provided
-    serve(app, host="0.0.0.0", port=port)     # Bind to all interfaces
+if __name__ == "__main__":
+    # This block is only for local development and testing
+    import os
+    port = int(os.environ.get("PORT", 8080))  # Use Azure-provided PORT or fallback to 8080 locally
+    app.run(host="0.0.0.0", port=port, debug=True, use_reloader=False, threaded=True)
+
 

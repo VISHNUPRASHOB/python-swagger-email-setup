@@ -1,0 +1,14 @@
+summary: "Will get you the host uri for the proxy request"
+tags:
+  - API test prime
+description: "This is a simple API to get headers HOST data."
+responses:
+  200:
+    description: "Success"
+    schema:
+      type: "array"
+      format: "string"
+
+  400:
+    description: "Same response is for 202, 400"
+

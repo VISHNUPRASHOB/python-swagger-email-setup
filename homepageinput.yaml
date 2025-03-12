@@ -1,0 +1,31 @@
+summary: Get Available Services
+tags:
+  - Jyothisha
+description: "This is an API to fetch available services. \n name: <service_name> \n description: <service_description>\n If the information is correct, click ```Execute``` button to get the list of services."
+produces:
+  - application/json
+responses:
+  200:
+    description: Success 200
+    schema:
+      type: array
+      items:
+        type: object
+        properties:
+          name:
+            type: string
+            example: "Web Development"
+          description:
+            type: string
+            example: "Custom web applications and websites."
+  500:
+    description: Internal Server Error 500
+    schema:
+      type: object
+      properties:
+        data:
+          type: string
+          example: "Internal server error."
+        value:
+          type: string
+          example: "0"

@@ -1,0 +1,42 @@
+summary: Get Temperature
+tags:
+  - Temperature
+description: "This is a simple API to fetch temperature from any place. \n place: <city_name> \n state: <state_name>\n If the above information is done, click ```Execute``` button for getting the proper output."
+produces:
+- application/json
+parameters:
+- in: query
+  name: place
+  type: string
+  required: true
+  default: palakkad
+- in: query
+  name: state
+  type: string
+  required: true
+  default: kerala
+responses:
+  200:
+    description: Success 200
+    schema:
+      type: object
+      properties:
+        data:
+          type: string
+          example: Temperature From <city> ,<state>.
+        value:
+          type: string
+          example: 23.5
+
+ 
+  400:
+    description: Response Error 400
+    schema:
+      type: object
+      properties:
+        data:
+          type: string
+          example: Error Input Format, Kindly check the place & state information.
+        value:
+          type: string
+          example: 0
